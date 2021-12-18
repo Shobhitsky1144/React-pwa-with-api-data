@@ -16,3 +16,18 @@ fetch data from store in offline mode
 
 show offline mode warning to user
 
+use web app as mobile in progresssive web app
+
+make build of our react app
+
+install android studio 
+
+open  mobile chrome app and run application
+
+add to home scree it will work as mobile app
+
+open chrome dev tool
+
+open remote device
+
+add port and localhost to forward port
