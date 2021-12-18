@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Table } from "react-bootstrap";
 export default function Users() {
   const [data, setData] = useState([]);
-  // const [mode, setMode] = useState("online");
+  const [mode, setMode] = useState("online");
   useEffect(() => {
     let url = "https://jsonplaceholder.typicode.com/users";
     fetch(url)
@@ -14,7 +14,7 @@ export default function Users() {
         });
       })
       .catch((err) => {
-        // setMode("offline");
+        setMode("offline");
         let collection = localStorage.getItem("users");
         setData(JSON.parse(collection));
       });
@@ -22,11 +22,11 @@ export default function Users() {
   return (
     <div>
       <div>
-        {/* {mode === "offline" ? (
+        {mode === "offline" ? (
           <div class="alert alert-warning" role="alert">
             you are in offline mode or some issue with connection
           </div>
-        ) : null} */}
+        ) : null}
       </div>
       <Table striped bordered hover>
         <thead>
